@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <!-- Css link -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>CineFlix - Login page</title>
+
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header-index">
+        <div class="logo">
+            <!-- Logo da empresa -->
+            <img src="img/logo.png" alt="">
+        </div>
+
+        <div class="log-div">
+            <span>Bem-Vindo ( usuário )</span>
+            <a href="?logout=1">
+                <div class="logout">
+                    Sair
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container container-forms justify-content-between d-flex gap-5">
+            <!-- Form 1 -->
+            <div class="card-form card-form-custom-index">
+                <div class="tittle">
+                    Adicionar Novo Filme
+                </div>
+    
+                <!-- Formulário -->
+                <form method="post" class="d-flex flex-column">
+                    <!-- Input nome -->
+                    <div class="input-container">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" class="input" id="select"  required>
+                    </div>
+                    <!-- Select gênero -->
+                    <div class="input-container select">
+                        <label for="genero">Gênero</label>
+                        <select name="genero" class="input" required>
+                            <option selected disabled>Selecione um Gênero</option>
+                            <option id="option" value="terror">Terror</option>
+                            <option id="option" value="comedia">Comédia</option>
+                            <option id="option" value="fantasia">Fantasia</option>
+                        </select>
+                    </div>
+
+                    <!-- Select Tipo -->
+                    <div class="input-container select">
+                        <label for="tipo">Tipo</label>
+                        <select name="tipo" class="input" required>
+                            <option selected disabled>Selecione um Tipo</option>
+                            <option id="option" value="filme">Filme</option>
+                            <option id="option" value="serie">Serie</option>
+                            <option id="option" value="documentario">Documentário</option>
+                        </select>
+                    </div>
+    
+                    <!-- Input para Entrar / Enviar dados -->
+                    <input type="submit" value="+ Adicionar Filmes" class="input-submit">
+                </form>
+            </div>
+
+            <!-- Form 2 -->
+            <div class="card-form card-form-custom-index" id="calcular">
+                <div class="tittle">
+                    Calcular Precisão Do Alugel
+                </div>
+    
+                <!-- Formulário -->
+                <form method="post" class="d-flex flex-column">
+                    <!-- Select Tipo -->
+                    <div class="input-container select">
+                        <label for="tipo">Tipo</label>
+                        <select name="tipo" class="input" required>
+                            <option selected disabled>Selecione um Tipo</option>
+                            <option id="option" value="filme">Filme</option>
+                            <option id="option" value="serie">Serie</option>
+                            <option id="option" value="documentario">Documentário</option>
+                        </select>
+                    </div>
+
+                    <!-- Input qnt dias -->
+                    <div class="input-container">
+                        <label for="quantidade">Quantidade De Dias</label>
+                        <input type="number" name="quantidade" class="input" required>
+                    </div>
+
+                    <!-- Input para Entrar / Enviar dados -->
+                    <input type="submit" value="Calcular" class="input-submit">
+                </form>
+            </div>
+        </div>
+
+        <!-- Form 2 -->
+        <div class="card-form card-form-custom-index container" id="table">
+            <div class="tittle">
+                Filmes cadastrados
+            </div>
+
+            <!-- tabela -->
+            <table>
+                <thead>
+                  <tr>
+                    <th>Tipo</th>
+                    <th>Título</th>
+                    <th>Gênero</th>
+                    <th>Estado</th>
+                    <th>Ação</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Filme</td>
+                    <td>O Poderoso Chefão</td>
+                    <td>Drama</td>
+                    <td>Disponivel</td>
+                    <td class="acao"><a href="#">Editar</a>
+                     <a href="#">Excluir</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>Filme</td>
+                    <td>O Poderoso Chefão</td>
+                    <td>Drama</td>
+                    <td>Disponivel</td>
+                    <td class="acao"><a href="#">Editar</a>
+                     <a href="#">Excluir</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>Filme</td>
+                    <td>O Poderoso Chefão</td>
+                    <td>Drama</td>
+                    <td>Disponivel</td>
+                    <td class="acao"><a href="#">Editar</a>
+                     <a href="#">Excluir</a></td>
+                  </tr>
+                </tbody>
+            </table>
+              
+        </div>
+
+    </main>
+
+    <!-- Footer ( Rodapé ) -->
+    <footer class="d-flex">
+        CineFlix 2025 - Todos os direitos reservados
+    </footer>
+
+
+    <!-- Srcipt bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
