@@ -12,10 +12,10 @@
 
 body {
     background: linear-gradient(to bottom,
-     #003648 0%,
-     #3745B4 50%,
-     #18051F 100%
-     );
+    #003648 0%,
+    #3745B4 50%,
+    #18051F 100%
+    );
     min-height: 100vh;
     margin: 0;
 
