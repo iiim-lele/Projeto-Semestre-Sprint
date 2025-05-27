@@ -11,6 +11,78 @@
     <link rel="stylesheet" href="style.css">
 
     <title>CineFlix - Login page</title>
+
+    <style>
+    /* flip card */
+    .cartoes {
+        /* Cima, direita, baixo, esquerda */
+        margin: 5rem 5rem 20px 4rem;
+    }
+    .cards {
+        margin: 0.3rem 5rem 5rem 5rem;
+    }
+
+    .container {
+        position: relative;
+        width: 25%;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #142d5b;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(243, 241, 241, 0.5);
+    }
+
+    .container:hover .overlay {
+        opacity: 1;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .container-card h1 {
+        font-size: xx-large;
+        color: aliceblue;
+        padding-left: 35px;
+    }
+
+    .container h4 {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+        color: aliceblue;
+    }
+
+    .text {
+        text-align: start;
+    }
+
+    </style>
 </head>
 
 <body>
@@ -41,24 +113,24 @@
             <!-- carousel -->
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="img/trolls.png" class="d-block w-75 rounded mx-auto mt-5" alt="Trolls">
+                    <img src="img/hobbit.png" class="d-block w-75 rounded mx-auto mt-5" alt="Trolls">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h5>O Hobbit: uma jornada inesperada</h5>
+                        <p>Aventura - Fantasia</p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
                     <img src="img/guardioes.png" class="d-block w-75 rounded mx-auto mt-5" alt="Guardioes">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                        <h5>Guardiões da Galáxia</h5>
+                        <p>Ação -  Comédia - Ficção Científica</p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
                     <img src="img/trolls coloridos.png" class="d-block w-75 rounded mx-auto mt-5" alt="Trolls Coloridos">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                        <h5>Trolls</h5>
+                        <p>Animação - Família</p>
                     </div>
                 </div>
             </div>
@@ -73,32 +145,43 @@
             </button>
         </div>
 
+        <!-- CARDS -->
+        <div class="container-card cartoes">
+            <h1>OPÇÕES DE FILMES</h1>
+        </div>
         <div class="cards d-flex">
             <div class="container">
                 <img src="img/unnamed.png" alt="Avatar" class="image">
                 <div class="overlay">
-                    <div class="text">Hello World</div>
+                    <h4>À Procura da Felicidade</h4>
+                    <div class="text">Chris enfrenta dificuldades financeiras após sua esposa partir, 
+                        ficando responsável pelo filho...
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
                 </div>
             </div>
 
             <div class="container">
                 <img src="img/p baixo como treinar.png" alt="Avatar" class="image">
                 <div class="overlay">
-                    <div class="text">Hello World</div>
+                    <h4>Como Treinar o Seu Dragão 3 </h4>
+                    <div class="text">Soluço busca realizar seu grande sonho de encontrar um lar pacífico onde...</div>
                 </div>
             </div>
 
             <div class="container">
                 <img src="img/medieval.png" alt="Avatar" class="image">
                 <div class="overlay">
-                    <div class="text">Hello World</div>
+                    <h4>Medieval</h4>
+                    <div class="text">Um líder mercenário sela seu destino ao declarar guerra contra...</div>
                 </div>
             </div>
 
             <div class="container">
                 <img src="img/star.png" alt="Avatar" class="image">
                 <div class="overlay">
-                    <div class="text">Hello World</div>
+                    <h4>Star Wars: Os Últimos Jedi</h4>
+                    <div class="text">A vida isolada de Luke Skywalker é interrompida quando ele conhece</div>
                 </div>
             </div>
         </div>
